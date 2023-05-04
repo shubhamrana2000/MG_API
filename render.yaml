@@ -1,11 +1,11 @@
 databases:
   - name: MG_API
-    databaseName: MG_API
-    user: MG_API
+    databaseName: postgresql_otyl
+    user: postgresql_otyl_user
 
 services:
   - type: web
-    name: MG_API
+    name: wish
     env: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
