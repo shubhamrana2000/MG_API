@@ -73,4 +73,4 @@ end
 
 gem 'grape'
 gem 'geocoder'
-gem 'pg'
+gem "pg", "~> 1.1"

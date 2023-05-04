@@ -27,9 +27,7 @@ production:
 
 production:
   <<: *default
-  # adapter: postgresql
-  # encoding: unicode 
   database: MG_API_production
-  url: <%= DATABASE_URL %>
   username: MG_API
   password: <%= ENV['MG_API_DATAVBASE_PASSWORD'] %>
+  # url: <%= DATABASE_URL %>
