@@ -1,19 +1,18 @@
 databases:
-  - name: postgres
-    ipAllowList: []
-    databaseName: MG_API_render
-    user: MG_API_render
+  - name: MG_API
+    databaseName: MG_API
+    user: MG_API
 
 services:
   - type: web
-    name: MG_API_render
+    name: MG_API
     env: ruby
-    buildCommand: "./render-build.sh"
-    startCommand: "bundle exec rails s"
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: postgres
+          name: MG_API
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false

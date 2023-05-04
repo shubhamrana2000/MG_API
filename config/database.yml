@@ -12,22 +12,24 @@ default: &default
 
 development:
   <<: *default
-  database: db/development.sqlite3
+  database: MG_API_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: db/test.sqlite3
+  database: MG_API_test
 
 production:
   <<: *default
-  url: <%= ENV["DATABASE_URL"] %>
+  url: <%= ENV['DATABASE_URL'] %>
 
 production:
   <<: *default
-  url: <%= DATABASE_URL %>
+  # adapter: postgresql
+  # encoding: unicode 
   database: MG_API_production
+  url: <%= DATABASE_URL %>
   username: MG_API
   password: <%= ENV['MG_API_DATAVBASE_PASSWORD'] %>
