@@ -5,14 +5,14 @@
 #   gem "sqlite3"
 #
 default: &default
-  adapter: postgresql
+  adapter: sqlite3
   encoding: unicode 
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  # timeout: 5000
+  timeout: 5000
 
 development:
   <<: *default
-  database: MG_API_development
+  database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -26,7 +26,10 @@ production:
   url: postgres://postgresql_otyl_user:Rx9xuqHYIuJOz2211FV4UrmDmRA2J6cr@dpg-ch9qu2pjvhtimranjvg0-a/postgresql_otyl
 
 production:
-  <<: *default
+  # <<: *default
+  adapter: postgresql
+  encoding: unicode 
   database: postgresql_otyl
+  pool: 5 
   username: postgresql_otyl_user
   password: Rx9xuqHYIuJOz2211FV4UrmDmRA2J6cr
