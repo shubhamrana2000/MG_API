@@ -73,3 +73,4 @@ end
 
 gem 'grape'
 gem 'geocoder'
+gem 'pg'
