@@ -23,11 +23,10 @@ test:
 
 production:
   <<: *default
-  url: <%= ENV['DATABASE_URL'] %>
+  url: postgres://postgresql_otyl_user:Rx9xuqHYIuJOz2211FV4UrmDmRA2J6cr@dpg-ch9qu2pjvhtimranjvg0-a/postgresql_otyl
 
 production:
   <<: *default
-  database: MG_API_production
-  username: MG_API
-  password: <%= ENV['MG_API_DATAVBASE_PASSWORD'] %>
-  # url: <%= DATABASE_URL %>
+  database: postgresql_otyl
+  username: postgresql_otyl_user
+  password: Rx9xuqHYIuJOz2211FV4UrmDmRA2J6cr
