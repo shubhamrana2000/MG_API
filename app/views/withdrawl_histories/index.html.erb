@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Withdrawl histories</h1>
+  <!-- <%= link_to "New withdrawl history", new_withdrawl_history_path,class:"btn btn-outline-primary" %> -->
+</div>
+
+<div id="withdrawl_histories">
+  <table class="table table-hover">
+    <thead style="background: #7969b3;color:white">
+      <tr>
+        <th>S.No</th>
+        <th>w_coins</th>
+        <th>Transaction_type_logo </th>
+        <th>Transaction_ID</th>
+        <th>Transaction_type </th>
+        <th>Show </th>
+      </tr>
+    </thead>
+    <tbody>
+  <% @withdrawl_histories.each_with_index do |withdrawl_history,index| %>
+    <tr>
+      <td><%= index+1 %>
+      <%= render withdrawl_history %>
+      <td><%= link_to "Show this withdrawl history", withdrawl_history,class:"btn btn-outline-warning" %></td>
+    </tr>
+  <% end %>
+</tbody>
+</div>
+ 

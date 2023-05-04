@@ -1,0 +1,30 @@
+<!-- <div id="<%= dom_id game %>">
+  <p>
+    <strong>Gamename:</strong>
+  </p>
+
+  <p>
+    <strong>Gameurl:</strong>
+  </p>
+
+  <p>
+    <strong>Gameimgurl:</strong>
+  </p>
+
+  <p>
+    <strong>Gameamt:</strong>
+  </p>
+
+</div>
+ -->
+
+<style>
+  img{
+    width:40px;
+    height:40px;
+  }
+</style>
+<td><%= game.gamename %></td>
+<td><%= game.gameurl %></td>
+<td><img src="<%= game.gameimgurl %>"></td>
+<td><%= game.gameamt %></td>

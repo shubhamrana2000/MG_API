@@ -1,0 +1,29 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Games</h1>
+  <%= link_to "New game", new_game_path,class:"btn btn-outline-primary" %>
+</div>
+
+<div id="games">
+  <table class="table table-hover">
+    <thead style="background: #7969b3;color:white">
+      <tr>
+        <th>S.No</th>
+        <th>GameName</th>
+        <th>Game Url </th>
+        <th>GameImgUrl</th>
+        <th>GameAmt</th>
+        <th>Show</th>
+      </tr>
+    </thead>
+    <tbody>
+  <% @games.each_with_index do |game,index| %>
+  <tr>
+    <td> <%= index+1 %></td>
+    <%= render game %>
+      <td><%= link_to "Show this game", game %></td>
+    </tr>
+  <% end %>
+</div>
+

@@ -1,0 +1,37 @@
+<%= form_with(model: app_open) do |form| %>
+  <% if app_open.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(app_open.errors.count, "error") %> prohibited this app_open from being saved:</h2>
+
+      <ul>
+        <% app_open.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :userId, style: "display: block" %>
+    <%= form.text_field :userId %>
+  </div>
+
+  <div>
+    <%= form.label :securityToken, style: "display: block" %>
+    <%= form.text_field :securityToken %>
+  </div>
+
+  <div>
+    <%= form.label :versionName, style: "display: block" %>
+    <%= form.text_field :versionName %>
+  </div>
+
+  <div>
+    <%= form.label :versionCode, style: "display: block" %>
+    <%= form.text_field :versionCode %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

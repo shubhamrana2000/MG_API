@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  w_coins: 1
+  Trans_type_logo: MyString
+  Transaction_ID: MyString
+  transaction_type: MyString
+
+two:
+  w_coins: 1
+  Trans_type_logo: MyString
+  Transaction_ID: MyString
+  transaction_type: MyString

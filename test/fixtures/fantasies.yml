@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  signupBonus: MyString
+  Min_withdrawl: MyString
+  WithdrawlType: MyString
+  RefferalCode: MyString
+  Logo: MyString
+  Title: MyString
+  TaskLink: MyString
+
+two:
+  signupBonus: MyString
+  Min_withdrawl: MyString
+  WithdrawlType: MyString
+  RefferalCode: MyString
+  Logo: MyString
+  Title: MyString
+  TaskLink: MyString

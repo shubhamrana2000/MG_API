@@ -1,0 +1,43 @@
+<p style="color: green"><%= notice %></p>
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Users</h1>
+  <!-- <%= link_to "New user", new_user_path,class:"btn btn-outline-primary" %> -->
+</div>
+<div id="users">
+  <table class="table table-hover"  >
+  <thead style="background: #7969b3;color:white">
+    <tr>
+      <th>S.No</th>
+      <th>DeviceId</th>
+      <th>DeviceType</th>
+      <th>DeviceName</th>
+      <th>SocialType</th>
+      <th>SocialId</th>
+      <th>SocialToken</th>
+      <th>SocialEmail</th>
+      <th>SocialName</th>
+      <th>SocialImgUrl</th>
+      <th>AdvertisingId</th>
+      <th>VesionName</th>
+      <th>VesionCode</th>
+      <th>UtmSource</th>
+      <th>UtmMedium</th>
+      <th>UtmTerm</th>
+      <th>UtmContent</th>
+      <th>UtmCompaign</th>
+      <td>Show</td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each_with_index do |user,index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <%= render user %> 
+      
+      <td><%= link_to "Show", user %></td>
+      
+    </tr>
+    <% end %>
+</div>
+
+

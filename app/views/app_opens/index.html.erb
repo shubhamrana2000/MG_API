@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>App opens</h1>
+
+<div id="app_opens">
+  <table class="table table-hover"  >
+  <thead style="background: #7969b3;color:white">
+    <tr>
+      <th>S.No</th>
+      <th>User id </th>
+      <th>VersionName</th>
+      <th>VersionCode</th>
+      <th>Location</th>
+      <th>SourceIp</th>
+      <th>show </th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @app_opens.each_with_index do |app_open,index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <%= render app_open %>
+      <td><%= link_to "Show this app open", app_open %></td>
+    </tr>
+  <% end %>
+</div>
+
+<%= link_to "New app open", new_app_open_path %>

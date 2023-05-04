@@ -1,0 +1,32 @@
+<%= form_with(model: points_history) do |form| %>
+  <% if points_history.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(points_history.errors.count, "error") %> prohibited this points_history from being saved:</h2>
+
+      <ul>
+        <% points_history.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :A_coins, style: "display: block" %>
+    <%= form.number_field :A_coins %>
+  </div>
+
+  <div>
+    <%= form.label :Add_type_logo, style: "display: block" %>
+    <%= form.text_field :Add_type_logo %>
+  </div>
+
+  <div>
+    <%= form.label :Scheme_Name, style: "display: block" %>
+    <%= form.text_field :Scheme_Name %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

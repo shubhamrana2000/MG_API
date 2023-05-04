@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @points_history %>
+
+<div>
+  <%= link_to "Edit this points history", edit_points_history_path(@points_history) %> |
+  <%= link_to "Back to points histories", points_histories_path %>
+
+  <%= button_to "Destroy this points history", @points_history, method: :delete %>
+</div>

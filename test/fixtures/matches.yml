@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_status: MyString
+  match_views: MyString
+  match_title: MyString
+  match_short_title: MyString
+  front_team: MyString
+  opposite_team: MyString
+
+two:
+  match_status: MyString
+  match_views: MyString
+  match_title: MyString
+  match_short_title: MyString
+  front_team: MyString
+  opposite_team: MyString

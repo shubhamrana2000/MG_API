@@ -1,0 +1,32 @@
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Fantasies</h1>
+  <%= link_to "New fantasy", new_fantasy_path,class:"btn btn-outline-primary" %>
+</div>
+<div id="fantasies">
+  <table class="table table-hover">
+    <thead style="background: #7969b3;color:white">
+      <tr>
+        <th>S.No</th>
+        <th>Title</th>
+        <th>Logo</th>
+        <th>SignUpBonus</th>
+        <th>Min_withdrawl</th>
+        <th>Withdrawl_type</th>
+        <th>Refferal_Code</th>
+        <th>Task_Link</th>
+        <th>Show</th>
+      </tr>
+    </thead>
+    <tbody>
+  <% @fantasies.each_with_index do |fantasy,index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <%= render fantasy %>
+      <td><%= link_to "Show this fantasy", fantasy,class:"btn btn-outline-warning" %></td>
+    </tr>
+  <% end %>
+</div>
+
+ 

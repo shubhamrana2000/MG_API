@@ -1,0 +1,52 @@
+<%= form_with(model: fantasy) do |form| %>
+  <% if fantasy.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(fantasy.errors.count, "error") %> prohibited this fantasy from being saved:</h2>
+
+      <ul>
+        <% fantasy.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :signupBonus, style: "display: block" %>
+    <%= form.text_field :signupBonus %>
+  </div>
+
+  <div>
+    <%= form.label :Min_withdrawl, style: "display: block" %>
+    <%= form.text_field :Min_withdrawl %>
+  </div>
+
+  <div>
+    <%= form.label :WithdrawlType, style: "display: block" %>
+    <%= form.text_field :WithdrawlType %>
+  </div>
+
+  <div>
+    <%= form.label :RefferalCode, style: "display: block" %>
+    <%= form.text_field :RefferalCode %>
+  </div>
+
+  <div>
+    <%= form.label :Logo, style: "display: block" %>
+    <%= form.text_field :Logo %>
+  </div>
+
+  <div>
+    <%= form.label :Title, style: "display: block" %>
+    <%= form.text_field :Title %>
+  </div>
+
+  <div>
+    <%= form.label :TaskLink, style: "display: block" %>
+    <%= form.text_field :TaskLink %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

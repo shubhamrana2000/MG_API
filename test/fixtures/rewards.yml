@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trans_type: MyString
+  trans_logo: MyString
+  coins_req: 1
+
+two:
+  trans_type: MyString
+  trans_logo: MyString
+  coins_req: 1

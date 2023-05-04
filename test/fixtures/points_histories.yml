@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  A_coins: 1
+  Add_type_logo: MyString
+  Scheme_Name: MyString
+
+two:
+  A_coins: 1
+  Add_type_logo: MyString
+  Scheme_Name: MyString

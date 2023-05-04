@@ -1,0 +1,56 @@
+<style>
+  table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+</style>
+
+<p style="color: green"><%= notice %></p>
+
+<div class="d-flex justify-content-between align-items-center mb-0">
+  <h1>Matches</h1>
+  <%= link_to "New match", new_match_path,class:"btn btn-outline-primary" %>
+</div>
+
+<div id="matches">
+  <table class="table table-hover"  >
+  <thead style="background: #7969b3;color:white">
+    <tr>
+      <th>S.No</th>
+      <th>Title </th>
+      <th>Short Title</th>
+      <th>views</th>
+      <th>Status</th>
+      <th>Front-Team</th>
+      <th>opposite-Team</th>
+      <th>Options</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @matches.each_with_index do |match,index| %>
+    <tr>
+      <td><%= index+1 %></td>
+      <%= render match %>
+      <td>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li style="text-align: center;"><%= link_to "Show", match ,class:"dropdown-item"%></li>
+            <li style="text-align: center;"><%= link_to "Edit", edit_match_path(match),class:"dropdown-item"%></li>
+        </ul>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+</div>
+
+
+
+
+      

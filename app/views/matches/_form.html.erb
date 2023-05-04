@@ -1,0 +1,54 @@
+<%= form_with(model: match) do |form| %>
+  <% if match.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(match.errors.count, "error") %> prohibited this match from being saved:</h2>
+
+      <ul>
+        <% match.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :match_title, style: "display: block" %>
+    <%= form.text_field :match_title %>
+  </div>
+
+  <div>
+    <%= form.label :match_short_title, style: "display: block" %>
+    <%= form.text_field :match_short_title %>
+  </div>
+
+  <div>
+    <%= form.label :match_status, style: "display: block" %>
+    <%= form.radio_button :match_status,"Live" %>
+    <%= form.label :match_status,"Live",value:"Live" %><br>
+    <%= form.radio_button :match_status,"Ongoing" %>
+    <%= form.label :match_status,"Ongoing",value:"Ongoing" %><br>
+    <%= form.radio_button :match_status,"Completed" %>
+    <%= form.label :match_status,"Completed",value:"completed" %>
+  </div>
+
+  <div>
+    <%= form.label :match_views, style: "display: block" %>
+    <%= form.text_field :match_views %>
+  </div>
+
+  <div>
+    <%= form.label :front_team, style: "display: block" %>
+    <%= form.collection_select(:front_team,Team.all,:team_name,:team_name) %>
+  </div>
+
+  <div>
+    <%= form.label :opposite_team, style: "display: block" %>
+    <%= form.collection_select(:opposite_team,Team.all,:team_name,:team_name) %>
+  </div>
+
+  <% match.front_team != match.opposite_team %>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
