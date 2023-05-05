@@ -74,3 +74,4 @@ end
 gem 'grape'
 gem 'geocoder'
 gem "pg", "~> 1.1"
+gem "dockerfile-rails", ">= 1.2", :group => :development
