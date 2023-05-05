@@ -1,42 +1,50 @@
-<div id="<%= dom_id userprofile %>">
+<!-- <div id="<%= dom_id userprofile %>">
   <p>
     <strong>Useremail:</strong>
-    <%= userprofile.userEmail %>
   </p>
 
   <p>
     <strong>Username:</strong>
-    <%= userprofile.userName %>
   </p>
 
   <p>
     <strong>Phonenumber:</strong>
-    <%= userprofile.phoneNumber %>
   </p>
 
   <p>
     <strong>Address:</strong>
-    <%= userprofile.Address %>
   </p>
 
   <p>
     <strong>Dob:</strong>
-    <%= userprofile.DOB %>
   </p>
 
   <p>
     <strong>Occupation:</strong>
-    <%= userprofile.Occupation %>
   </p>
 
   <p>
     <strong>Gender:</strong>
-    <%= userprofile.Gender %>
   </p>
 
   <p>
     <strong>Profilepic:</strong>
-    <%= userprofile.profilePic %>
   </p>
 
 </div>
+ -->
+
+ <style>
+  img{
+    width:40px;
+    height:40px;
+  }
+ </style>
+<td><%= userprofile.userEmail %></td>
+<td><%= userprofile.userName %></td>
+<td><%= userprofile.phoneNumber %></td>
+<td><%= userprofile.Address %></td>
+<td><%= userprofile.DOB %></td>
+<td><%= userprofile.Occupation %></td>
+<td><%= userprofile.Gender %></td>
+<td><img src="<%= userprofile.profilePic %>"></td>
