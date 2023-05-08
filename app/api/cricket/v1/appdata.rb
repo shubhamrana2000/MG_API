@@ -91,28 +91,28 @@
 		    resource :signup do
 		        desc "Signup API"
 		        params do
-		        	# requires :deviceId,type: String,allow_blank: false 
-		        	# optional :deviceType,type: String,allow_blank: true 
-		        	# optional :deviceName,type: String,allow_blank: true
+		        	requires :deviceId,type: String,allow_blank: false 
+		        	optional :deviceType,type: String,allow_blank: true 
+		        	optional :deviceName,type: String,allow_blank: true
 
-		        	# requires :socialType,type: String,allow_blank: false  
-		        	# requires :socialId,type: String,allow_blank: false 
-		        	# optional :socialToken,type: String,allow_blank: false 
+		        	requires :socialType,type: String,allow_blank: false  
+		        	requires :socialId,type: String,allow_blank: false 
+		        	optional :socialToken,type: String,allow_blank: false 
 
 		        	requires :socialEmail,type: String,allow_blank: false
 		        	optional :referral_code,type: String,allow_blank: true
-		        	# optional :socialName,type: String,allow_blank: true
-		        	# optional :socialImgUrl,type: String,allow_blank: true
+		        	optional :socialName,type: String,allow_blank: true
+		        	optional :socialImgUrl,type: String,allow_blank: true
 
-		        	# optional :adverstisiingId,type: String,allow_blank: true 
-		        	# requires :versionName,type: String,allow_blank: false 
-		        	# requires :versionCode,type: String,allow_blank: false 
+		        	optional :adverstisiingId,type: String,allow_blank: true 
+		        	requires :versionName,type: String,allow_blank: false 
+		        	requires :versionCode,type: String,allow_blank: false 
 
-		        	# optional :utmSource,type: String,allow_blank: true
-		        	# optional :utmMedium,type: String,allow_blank: true
-		        	# optional :utmterm,type: String,allow_blank: true
-		        	# optional :utmContent,type: String,allow_blank: true
-		        	# optional :utmCampaign,type: String,allow_blank: true
+		        	optional :utmSource,type: String,allow_blank: true
+		        	optional :utmMedium,type: String,allow_blank: true
+		        	optional :utmterm,type: String,allow_blank: true
+		        	optional :utmContent,type: String,allow_blank: true
+		        	optional :utmCampaign,type: String,allow_blank: true
 		        end
 
 

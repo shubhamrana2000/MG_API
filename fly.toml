@@ -1,10 +1,10 @@
-# fly.toml app configuration file generated for lingering-silence-5862 on 2023-05-05T13:48:27+05:30
+# fly.toml app configuration file generated for shubham on 2023-05-05T18:30:48+05:30
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "lingering-silence-5862"
-primary_region = "sin"
+app = "shubham"
+primary_region = "cdg"
 
 [http_service]
   internal_port = 3000
