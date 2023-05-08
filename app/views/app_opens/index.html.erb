@@ -1,5 +1,7 @@
-
-<h1>App opens</h1>
+<div class="d-flex justify-content-between align-items-center ">
+  <h1>App opens</h1>
+  <%= link_to "New app open", new_app_open_path,class:"btn btn-outline-primary" %>
+</div>
 
 <div id="app_opens">
   <table class="table table-hover"  >
@@ -24,4 +26,3 @@
   <% end %>
 </div>
 
-<%= link_to "New app open", new_app_open_path %>

@@ -18,10 +18,16 @@ body {
     background-color: #7952b3;
 /*    background-color: #7969b3;*/
     transition: 0.4s;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.navbar::-webkit-scrollbar {
+    display: none; /* Add this line to hide the scrollbar in Webkit browsers */
 }
 
 .nav-link {
-    font-size: 1.25em;
+    font-size: 1em;
 }
 
 .nav-link:active,
@@ -86,11 +92,12 @@ h3{
         <li class="nav-item w-100"><%= link_to "Tasks",tasks_path,class:"nav-link text-light pl-4" %></li>
         <li class="nav-item w-100"><%= link_to "Fantasy",fantasies_path,class:"nav-link text-light pl-4" %></li>
         <li class="nav-item w-100"><%= link_to "User Profile",userprofiles_path,class:"nav-link text-light pl-4" %></li>
+        <li class="nav-item w-100"><%= link_to "App Open",app_opens_path,class:"nav-link text-light pl-4" %></li>
     </ul>
-    </nav>
-    <section class="p-2 my-container">
-        <button class="btn my-1 fa-solid fa-bars" id="menu-btn"></button>
-        <%= render partial:'shared/notice'  %>
-        <%= yield %>
-    </section>
+</nav>
+<section class="p-2 my-container">
+    <button class="btn my-1 fa-solid fa-bars" id="menu-btn"></button>
+    <%= render partial:'shared/notice'  %>
+    <%= yield %>
+</section>
 <%= javascript_include_tag('test.js') %>
