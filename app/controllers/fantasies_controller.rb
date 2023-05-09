@@ -3,7 +3,8 @@ class FantasiesController < ApplicationController
 
   # GET /fantasies or /fantasies.json
   def index
-    @fantasies = Fantasy.all
+    # @fantasies = Fantasy.all
+    @fantasies = Fantasy.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /fantasies/1 or /fantasies/1.json

@@ -4,6 +4,7 @@ class AppOpensController < ApplicationController
   # GET /app_opens or /app_opens.json
   def index
     @app_opens = AppOpen.all
+    @app_opens = AppOpen.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /app_opens/1 or /app_opens/1.json

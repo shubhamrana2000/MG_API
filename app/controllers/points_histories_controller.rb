@@ -3,7 +3,8 @@ class PointsHistoriesController < ApplicationController
 
   # GET /points_histories or /points_histories.json
   def index
-    @points_histories = PointsHistory.all
+    # @points_histories = PointsHistory.all
+    @points_histories = PointsHistory.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /points_histories/1 or /points_histories/1.json

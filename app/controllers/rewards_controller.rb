@@ -3,7 +3,8 @@ class RewardsController < ApplicationController
 
   # GET /rewards or /rewards.json
   def index
-    @rewards = Reward.all
+    # @rewards = Reward.all
+    @rewards = Reward.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /rewards/1 or /rewards/1.json

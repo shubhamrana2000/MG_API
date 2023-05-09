@@ -75,3 +75,6 @@ gem 'grape'
 gem 'geocoder'
 gem "pg", "~> 1.1"
 gem "dockerfile-rails", ">= 1.2", :group => :development
+gem "will_paginate"
+# gem 'will_paginate-bootstrap5'
+gem 'will_paginate-bootstrap-style'

@@ -4,24 +4,26 @@
 </div>
 <div id="accounts">
   <table class="table table-hover"  >
-  <thead style="background: #7952b3;color:white">
-    <tr>
-      <th>S.No</th>
-      <th>Account ID</th>
-      <th>User Id </th>
-      <th>Coins</th>
-      <th>Referral Code</th>
-      <th>Show</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @accounts.each_with_index do |account,index| %>
+    <thead style="background: #7952b3;color:white">
       <tr>
-        <td> <%= index+1 %></td>
-        <%= render account %>
-        <td><%= link_to "Show this account", account,class:"btn btn-outline-warning" %></td>
+        <th>S.No</th>
+        <th>Account ID</th>
+        <th>User Id </th>
+        <th>Coins</th>
+        <th>Referral Code</th>
+        <th>Show</th>
       </tr>
-    <% end %>
-  </tbody>
+    </thead>
+    <tbody>
+      <% @accounts.each_with_index do |account,index| %>
+        <tr>
+          <td> <%= index+1 %></td>
+          <%= render account %>
+          <td><%= link_to "Show this account", account,class:"btn btn-outline-warning" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+<%= will_paginate @accounts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 

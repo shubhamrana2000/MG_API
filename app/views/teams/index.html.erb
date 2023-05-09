@@ -35,14 +35,14 @@ th, td {
           <%= render team %>
           <td>
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                  <li style="text-align: center;"><%= link_to "Show", team ,class:"dropdown-item"%></li>
-                  <li style="text-align: center;"><%= link_to "Edit", edit_team_path(team),class:"dropdown-item"%></li>
-              </ul>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                <li style="text-align: center;"><%= link_to "Show", team ,class:"dropdown-item",style:"color:white"%></li>
+                <li style="text-align: center;"><%= link_to "Edit", edit_team_path(team),class:"dropdown-item",style:"color:white"%></li>
+            </ul>
           </td>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
-
+<%= will_paginate @teams, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>

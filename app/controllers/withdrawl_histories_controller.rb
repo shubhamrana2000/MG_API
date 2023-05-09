@@ -3,7 +3,8 @@ class WithdrawlHistoriesController < ApplicationController
 
   # GET /withdrawl_histories or /withdrawl_histories.json
   def index
-    @withdrawl_histories = WithdrawlHistory.all
+    # @withdrawl_histories = WithdrawlHistory.all
+    @withdrawl_histories = WithdrawlHistory.paginate(page: params[:page], per_page: 20)
   end
 
   # GET /withdrawl_histories/1 or /withdrawl_histories/1.json
